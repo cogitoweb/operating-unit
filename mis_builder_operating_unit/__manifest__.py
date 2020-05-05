@@ -14,7 +14,7 @@
               "Odoo Community Association (OCA)",
     "license": "LGPL-3",
     'website': 'http://www.eficent.com',
-    'depends': ['mis_builder', 'account_operating_unit'],
+    'depends': ['mis_builder', 'analytic_operating_unit'],
     'data': [
         'view/mis_builder.xml',
         'security/mis_builder_security.xml'
