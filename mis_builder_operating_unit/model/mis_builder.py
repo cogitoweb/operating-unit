@@ -16,6 +16,14 @@ class MisReportInstance(models.Model):
                                           string='Operating Unit',
                                           required=False)
 
+    # override to force clear_caches
+    @api.multi
+    def write(self, vals):
+        ret = super(MisReportInstance, self).write(vals)
+        if 'operating_unit_ids' in vals:
+            self.env['ir.rule'].clear_caches()
+        return ret
+
 
 class MisReportInstancePeriod(models.Model):
 

@@ -32,3 +32,11 @@ class ResUsers(models.Model):
     default_operating_unit_id = fields.Many2one('operating.unit',
                                                 'Default Operating Unit',
                                                 default=_get_operating_unit)
+
+    # override to force clear_caches
+    @api.multi
+    def write(self, vals):
+        ret = super(ResUsers, self).write(vals)
+        if 'operating_unit_ids' in vals:
+            self.env['ir.rule'].clear_caches()
+        return ret
