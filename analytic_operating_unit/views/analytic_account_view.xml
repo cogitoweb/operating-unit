@@ -10,8 +10,11 @@
                ref="analytic.view_account_analytic_account_form"/>
         <field name="arch" type="xml">
             <field name="company_id" position="before">
-                <field name="operating_unit_ids" widget="many2many_tags"
-                       groups="operating_unit.group_multi_operating_unit"/>
+                <field name="operating_unit_id"
+                    attrs="{'invisible': [('type', '!=', 'analytic')]}"
+                    groups="operating_unit.group_multi_operating_unit"
+                    options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"/>
+                />
             </field>
         </field>
     </record>

@@ -13,7 +13,7 @@
               "Odoo Community Association (OCA)",
     "license": "LGPL-3",
     'website': 'https://github.com/operating-unit',
-    'depends': ['mis_builder', 'account_operating_unit'],
+    'depends': ['mis_builder', 'analytic_operating_unit'],
     'data': [
         'security/mis_builder_security.xml',
         'view/mis_builder.xml'
