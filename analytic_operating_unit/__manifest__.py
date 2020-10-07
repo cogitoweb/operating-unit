@@ -9,6 +9,7 @@
     "website": "https://github.com/OCA/operating-unit",
     "category": "Sales",
     "depends": [
+        "account",
         "analytic",
         "operating_unit",
     ],
