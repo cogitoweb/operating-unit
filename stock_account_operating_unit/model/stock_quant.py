@@ -40,7 +40,7 @@ class StockQuant(models.Model):
                     else:
                         quant_cost_qty[quant.cost] = quant.qty
                 move_obj = self.env['account.move']
-                for cost, qty in quant_cost_qty.items():
+                for cost, qty in list(quant_cost_qty.items()):
                     move_lines = move._prepare_account_move_line(qty, cost,
                                                                  acc_valuation,
                                                                  acc_valuation)

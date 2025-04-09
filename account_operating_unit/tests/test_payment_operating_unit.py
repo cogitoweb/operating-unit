@@ -32,6 +32,6 @@ class TestInvoiceOperatingUnit(test_ou.TestAccountOperatingUnit):
         register_payments.create_payment()
         payment = self.payment_model.search([], order="id desc", limit=1)
 
-        self.assertAlmostEquals(payment.amount, 115000)
+        self.assertAlmostEqual(payment.amount, 115000)
         self.assertEqual(payment.state, 'posted')
         self.assertEqual(self.invoice.state, 'paid')
