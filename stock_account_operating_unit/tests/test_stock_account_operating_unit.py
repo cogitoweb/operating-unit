@@ -3,7 +3,7 @@
 # Jordi Ballester Alomar
 # © 2015-17 Serpent Consulting Services Pvt. Ltd. - Sudhir Arya
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
-from openerp.addons.stock.tests import common
+from odoo.addons.stock.tests import common
 
 
 class TestStockAccountOperatingUnit(common.TestStockCommon):
